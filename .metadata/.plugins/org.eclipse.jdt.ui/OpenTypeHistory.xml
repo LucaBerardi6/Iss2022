@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{ILed.java[ILed" modifiers="513" timestamp="1646849455970"/>
+    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{ISonar.java[ISonar" modifiers="513" timestamp="1646849600766"/>
+</typeInfoHistroy>
