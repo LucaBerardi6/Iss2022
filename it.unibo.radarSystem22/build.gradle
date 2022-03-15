@@ -17,10 +17,18 @@ sourceCompatibility = 1.8
 repositories {
     jcenter()
     flatDir { dirs '../unibolibs' }
+    flatDir { dirs './libs' }
 }
 
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.12'
+
+//JSON
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20160810'
+
+//CUSTOM RadarSystem
+	implementation name: 'it.unibo.radarSystem22.domain-1.0'
 
 //CUSTOM unibo
     implementation name: '2p301'
@@ -44,7 +52,7 @@ eclipse {
     }
 }
 
-mainClassName = 'it.unibo.xxx'  //TODO
+mainClassName = 'it.unibo.radarSystem22.sprint1.RadarSystemSprint1Main'    //TODO
 
 jar {
     from sourceSets.main.allSource
@@ -55,6 +63,7 @@ jar {
 distributions {
     main {
         contents {
+       	    from './DomainSystemConfig.json'
             from './RadarSystemConfig.json'
         }
     }

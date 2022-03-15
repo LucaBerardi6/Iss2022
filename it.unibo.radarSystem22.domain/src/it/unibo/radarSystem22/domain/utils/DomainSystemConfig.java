@@ -3,6 +3,10 @@ package it.unibo.radarSystem22.domain.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
@@ -22,11 +26,11 @@ public class DomainSystemConfig {
 	public static boolean testing         = false;			
 	
 
-	public static void setTheConfiguration(  ) {
+	public static void setTheConfiguration(  ) throws JSONException {
 		setTheConfiguration("../DomainSystemConfig.json");
 	}
 	
-	public static void setTheConfiguration( String resourceName ) {
+	public static void setTheConfiguration( String resourceName ) throws JSONException {
 		//Nella distribuzione resourceName è in una dir che include la bin  
 		FileInputStream fis = null;
 		try {
@@ -34,7 +38,8 @@ public class DomainSystemConfig {
 			if(  fis == null ) {
  				 fis = new FileInputStream(new File(resourceName));
 			}
-	        JSONTokener tokener = new JSONTokener(fis);
+			Reader reader = new InputStreamReader(fis);
+	        JSONTokener tokener = new JSONTokener(reader);
 	        JSONObject object   = new JSONObject(tokener);
 	 		
 	        simulation          = object.getBoolean("simulation");
@@ -48,6 +53,7 @@ public class DomainSystemConfig {
 	        DLIMIT           = object.getInt("DLIMIT");	
 	        tracing          = object.getBoolean("tracing");
 	        testing          = object.getBoolean("testing");
+	        ledGui           = object.getBoolean("ledGui");
 	        
  	        
 		} catch (FileNotFoundException e) {

@@ -1,107 +1,35 @@
 package it.unibo.radarSystem22.domain;
-
-import static org.junit.Assert.*;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+import org.junit.*;
 
 import it.unibo.radarSystem22.domain.interfaces.ISonar;
-import it.unibo.radarSystem22.domain.mock.SonarMock;
+import it.unibo.radarSystem22.domain.utils.BasicUtils;
+import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
+ 
 
 public class TestSonar {
-
-
 	@Before
 	public void up() {
-		System.out.println("up test Sonar");
+		System.out.println("up");
 	}
 	
 	@After
 	public void down() {
-		System.out.println("down test Sonar");		
+		System.out.println("down");		
 	}	
 	
 	@Test 
-	public void testSonarMockOnOff() {
+	public void testSonarMock() {
+		DomainSystemConfig.simulation = true;
+		DomainSystemConfig.testing    = false;
+		DomainSystemConfig.sonarDelay = 10;		//quite fast generation ...
+		int delta = 1;
 		
-		System.out.println("test Sonar Mock on");
-		ISonar sonar= new SonarMock();
-		
-		assertTrue( ! sonar.isActive() );
-		
-		sonar.activate();
+		ISonar sonar = DeviceFactory.createSonar();
+		new SonarConsumerForTesting( sonar, delta ).start();  //consuma
+		sonar.activate();		
+ 		while( sonar.isActive() ) { BasicUtils.delay(1000);} //to avoid premature exit
+ 	}
 	
-		assertTrue( sonar.isActive() );
-		
-		sonar.deactivate();
-		
-		assertTrue( ! sonar.isActive() );
-		
  
-	
-	}	
-	
-	@Test 
-	public void testSonarMockDistance() throws InterruptedException {
-		
-		System.out.println("test Sonar Mock Distance");
-		ISonar sonar= new SonarMock();
-	
-		
-	
-		assertTrue( sonar.getDistance().getVal()==90 );
-		
-		
-		sonar.activate();
-		//
-		Thread.sleep(250);
-		assertTrue( sonar.getDistance().getVal()==89 );
-		//
-		Thread.sleep(1000);
-		assertTrue( sonar.getDistance().getVal()==85 );
-		//
-		Thread.sleep(1000);
-		assertTrue( sonar.getDistance().getVal()==81 );
-		//
-		sonar.deactivate();
-		assertTrue( sonar.getDistance().getVal()==81 );
-		assertTrue( ! sonar.isActive() );
-		
- 
-	
-	}	
-	
-	/*@Test 
-	public void testSonarMockDistanceError() throws InterruptedException {
-		
-		System.out.println("test Sonar Mock error");
-		ISonar sonar= new SonarMock();
-	
-		
-	
-		assertTrue( sonar.getDistance().getVal()==90 );
-		
-		
-		sonar.activate();
-		//
-		Thread.sleep(250);
-		assertTrue( sonar.getDistance().getVal()==90 );
-		//
-		Thread.sleep(1000);
-		assertTrue( sonar.getDistance().getVal()==86 );
-		//
-		Thread.sleep(1000);
-		assertTrue( sonar.getDistance().getVal()==80 );
-		//
-		sonar.deactivate();
-		assertTrue( sonar.getDistance().getVal()==81 );
-		assertTrue( ! sonar.isActive() );
-		
- 
-	
-	}	*/
-	
-	
-	
 }
