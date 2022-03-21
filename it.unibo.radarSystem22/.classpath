@@ -5,6 +5,26 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry kind="lib" path="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.pushingpixels/trident/1.3/a90e1fe1a5f47288e5820666179397dd10ca021/trident-1.3.jar" sourcepath="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.pushingpixels/trident/1.3/10500bc7aa7515ad5661de1a1f955396b53f7eb8/trident-1.3-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/probook/.gradle/caches/modules-2/files-2.1/com.google.android/android/2.3.3/949a2bef1ffe62e81af5d8919d17dfcc1309c43c/android-2.3.3.jar" sourcepath="C:/Users/probook/.gradle/caches/modules-2/files-2.1/com.google.android/android/2.3.3/7b644b141fa89027d83e7af10b1f69658f572352/android-2.3.3-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.json/json/20160810/aca5eb39e2a12fddd6c472b240afe9ebea3a6733/json-20160810.jar" sourcepath="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.json/json/20160810/92f4b89bc0bb4c7c3f7b52724568a901b7e0195b/json-20160810-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/probook/Desktop/issLab2022/unibolibs/it.unibo.radarSystem22.domain-1.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value=""/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/probook/Desktop/issLab2022/unibolibs/2p301.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value=""/>
@@ -21,16 +41,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/probook/Desktop/issLab2022/unibolibs/radarPojo.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.pushingpixels/trident/1.3/a90e1fe1a5f47288e5820666179397dd10ca021/trident-1.3.jar" sourcepath="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.pushingpixels/trident/1.3/10500bc7aa7515ad5661de1a1f955396b53f7eb8/trident-1.3-sources.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/probook/.gradle/caches/modules-2/files-2.1/com.google.android/android/2.3.3/949a2bef1ffe62e81af5d8919d17dfcc1309c43c/android-2.3.3.jar" sourcepath="C:/Users/probook/.gradle/caches/modules-2/files-2.1/com.google.android/android/2.3.3/7b644b141fa89027d83e7af10b1f69658f572352/android-2.3.3-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
@@ -70,11 +80,6 @@
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.json/json/20080701/d652f102185530c93b66158b1859f35d45687258/json-20080701.jar" sourcepath="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.json/json/20080701/71bd54221e701df9d112bf9ba2918e13b0671f3a/json-20080701-sources.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value=""/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.0.1/e813b8722c387b22e1adccf7914729db09bcb4a9/httpcore-4.0.1.jar" sourcepath="C:/Users/probook/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.0.1/69febd50593a006a4593ef64a697b14208a55b7b/httpcore-4.0.1-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value=""/>
@@ -97,6 +102,7 @@
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/it.unibo.comm2022"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/it.unibo.radarSystem22.domain"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>
