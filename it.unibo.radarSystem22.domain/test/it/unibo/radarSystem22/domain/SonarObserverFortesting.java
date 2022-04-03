@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Observable;
 
+import it.unibo.radarSystem22.domain.interfaces.IDistance;
 import it.unibo.radarSystem22.domain.interfaces.IObserver;
 import it.unibo.radarSystem22.domain.interfaces.ISonarObservable;
 import it.unibo.radarSystem22.domain.utils.ColorsOut;
@@ -27,16 +28,17 @@ class SonarObserverFortesting implements IObserver{
 	@Override
 	public void update(Observable source, Object data) {
 		 //Colors.out( name + " | update data=" + data ); //+ " from " + source	
-		 update( data.toString() );
+		 update( (IDistance) data);
 	}
 
 	@Override
-	public void update(String vs) {
+	public void update(IDistance vs) {
  		 if(oneShot) {
  			 ColorsOut.out( name + "| oneShot value=" + vs, ColorsOut.ANSI_YELLOW );  
  			 assertTrue(  vs.equals( ""+DomainSystemConfig.testingDistance) );	
  		 }else {
- 			 int value = Integer.parseInt(vs);
+ 			// int value = Integer.parseInt(vs);
+ 			 int value = vs.getVal();
  			 if( v0 == -1 ) {	//set the first value observed
  				v0 = value;
  				ColorsOut.out( name + "| v0=" + v0, ColorsOut.ANSI_YELLOW);

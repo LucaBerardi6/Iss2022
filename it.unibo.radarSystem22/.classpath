@@ -102,7 +102,7 @@
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/it.unibo.comm2022"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/it.unibo.radarSystem22.domain"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/it.unibo.comm2022"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>

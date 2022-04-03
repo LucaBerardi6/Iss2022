@@ -95,6 +95,6 @@ public class RadarSysSprint2ControllerOnRaspMain implements IApplication{
 
 	public static void main( String[] args) throws Exception {
 		BasicUtils.aboutThreads("At INIT with NO CONFIG files| ");
-		new RadarSysSprint2ControllerOnRaspMain().doJob( "DomainSystemConfig.json","RadarSystemConfig.json"); // !!!!!! da cambiare null,null sul rasp !!!!!!
+		new RadarSysSprint2ControllerOnRaspMain().doJob( "DomainSystemConfig.json","RadarSystemConfig.json"); // !!!!!! da cambiare null,null (per pc) sul rasp metti i json !!!!!!
 		}
 }
