@@ -10,15 +10,15 @@ import it.unibo.radarSystem22.domain.utils.ColorsOut;
 
 public class Observer implements IObserver {
 	
-	private IDistance distance;
+	private int distance;
 
 	@Override
 	public void update(Observable o, Object arg) {
-		if (arg instanceof Distance) {
-			 distance = (Distance)arg;
-				ColorsOut.out("************************* OSSERVATORE:**************************\n!!! update distance= "+distance.getVal(),ColorsOut.RED);
-			 } else {
-				 ColorsOut.out("!!! update distance=Unkonwn change!",ColorsOut.RED);
+		if (arg instanceof IDistance) {
+			update(arg.toString());
+		
+		} else {
+				 ColorsOut.out("!!!Observer!!! update distance=Unkonwn change!");
 			 }
 
 
@@ -26,16 +26,13 @@ public class Observer implements IObserver {
 	}
 
 	@Override
-	public void update(IDistance distance) {
-		 this.distance = distance;
+	public void update(String sDistance) {
+		 this.distance = Integer.parseInt(sDistance);
 		// System.out.println("************************* OSSERVATORE:**************************\n!!! update distance= "+distance.getVal());
-	ColorsOut.out("************************* OSSERVATORE:**************************\n!!! update distance= "+distance.getVal());
+	ColorsOut.out("************** OBSERVER:**************\n!!! update distance= "+distance+"\n**************************************");
 		
 	}
 	
-	public int getDistance() {
-		return distance.getVal();
-		
-	}
+	
 
 }

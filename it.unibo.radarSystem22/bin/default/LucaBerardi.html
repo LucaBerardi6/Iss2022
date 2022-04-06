@@ -220,12 +220,31 @@ Si desidera costruire un�applicazione software capace di:
  
 
 <h2>Requirement analysis</h2>
- 
+<div class="remark">
+    Il SonarObservable deve inviare le informazione, relative alla distanza rilevata dal sonar, a tutti i componenti software interessati, denominati Observer. <br>
+    Gli Observer, che possono risiedere sullo stesso nodo del sonar o su uno remoto, dovranno ricevere tali informazione qualora si presentino differenze significative tra esse.<br>
+    Deve essere realizzato un piano di testing al fine di verificare che gli Observer ricevano correttamente informazioni su un ostacolo posto dapprima a una distanza DTESTING1 e succesivamente a una distanza DTESTING2.<br>
+
+
+
+    
+</div> 
+
 
 </div>
 
 <h2>Problem analysis</h2>
  
+<div class="remark">
+  
+    per la realizzazione del patter observer si possono seguire due modalità:<br>
+        1. il SonarObservable è collegato direttamente ai tutti gli Observer interessati che, una volta registrati, riceveranno una notifica qualora le infoazioni siano considerate significative.<br>
+        2. il SonarObservable non tiene traccia degli Observer registati, ciò viene fatta da una terza parte, il Broker, che si occuperà anche di notificare le informazioni agli Observer interessati.<br>
+    Il secondo metodo risulta preferibile in quanto permette una separazione e non dipendenza dei 2 componenti.<br>
+
+    
+</div> 
+
 
 <h2>Test plans</h2> 
 

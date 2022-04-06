@@ -4,8 +4,10 @@ import it.unibo.radarSystem22.domain.Distance;
 import it.unibo.radarSystem22.domain.concrete.SonarConcrete;
 import it.unibo.radarSystem22.domain.interfaces.*;
 import it.unibo.radarSystem22.domain.mock.SonarMock;
+import it.unibo.radarSystem22.domain.mock.SonarObservableMock;
 import it.unibo.radarSystem22.domain.utils.ColorsOut;
 import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
+import it.unibo.radarSystem22.domain.concrete.SonarObservableConcrete;
 
 
 
@@ -25,7 +27,8 @@ protected boolean stopped   = true;
 	public static ISonar createSonarConcrete() {
 		ColorsOut.out("createSonarConcrete", ColorsOut.BLUE);
 		return new SonarConcrete();
-	}	
+	}
+	
 	
 	protected SonarModel() {//hidden costructor, to force setup
 		ColorsOut.out("SonarModel | calling (specialized) sonarSetUp ", ColorsOut.BLUE );

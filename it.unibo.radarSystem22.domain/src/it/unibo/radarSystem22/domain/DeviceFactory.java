@@ -1,7 +1,9 @@
 package it.unibo.radarSystem22.domain;
 
 import it.unibo.radarSystem22.domain.concrete.RadarDisplay;
+import it.unibo.radarSystem22.domain.concrete.SonarObservableConcrete;
 import it.unibo.radarSystem22.domain.interfaces.*;
+import it.unibo.radarSystem22.domain.mock.SonarObservableMock;
 import it.unibo.radarSystem22.domain.models.LedModel;
 import it.unibo.radarSystem22.domain.models.SonarModel;
 import it.unibo.radarSystem22.domain.utils.ColorsOut;
@@ -33,14 +35,14 @@ public class DeviceFactory {
 			return SonarModel.createSonarConcrete();
 		}
 	}
-//	public static ISonarObservable createSonarObservable() {
-//		ColorsOut.out("DeviceFactory | createSonarObservable simulated="+DomainSystemConfig.simulation);
-//		if( DomainSystemConfig.simulation)  {
-//			return new SonarMockObservable();
-//		}else { 
-//			return new SonarConcreteObservable();
-//		}	
-//	}
+	public static ISonarObservable createSonarObservable() {
+		ColorsOut.out("DeviceFactory | createSonarObservable simulated="+DomainSystemConfig.simulation);
+		if( DomainSystemConfig.simulation)  {
+			return new SonarObservableMock();
+		}else { 
+			return new SonarObservableConcrete();
+		}	
+	}
 	
 	//We do not have mock for RadarGui
 	public static IRadarDisplay createRadarGui() {

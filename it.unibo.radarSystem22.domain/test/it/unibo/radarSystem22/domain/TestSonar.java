@@ -23,6 +23,7 @@ public class TestSonar {
 		DomainSystemConfig.simulation = true;
 		DomainSystemConfig.testing    = false;
 		DomainSystemConfig.sonarDelay = 10;		//quite fast generation ...
+		
 		int delta = 1;
 		
 		ISonar sonar = DeviceFactory.createSonar();

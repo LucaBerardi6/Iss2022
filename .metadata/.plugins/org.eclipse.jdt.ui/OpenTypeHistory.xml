@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{ILed.java[ILed" modifiers="513" timestamp="1646849455970"/>
-    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{ISonar.java[ISonar" modifiers="513" timestamp="1646849600766"/>
+    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{ILed.java[ILed" modifiers="513" timestamp="1649250578290"/>
+    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{ISonar.java[ISonar" modifiers="513" timestamp="1649250578338"/>
     <typeInfo handle="=it.unibo.radarSystem22_4/C:\/Users\/probook\/Downloads\/jre1.8.0_202\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.util(Observer.class[Observer" modifiers="1537" timestamp="1544934888000"/>
-    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{IObserver.java[IObserver" modifiers="513" timestamp="1648999220426"/>
+    <typeInfo handle="=it.unibo.radarSystem22.domain/src&lt;it.unibo.radarSystem22.domain.interfaces{IObserver.java[IObserver" modifiers="513" timestamp="1649254931578"/>
 </typeInfoHistroy>

@@ -14,5 +14,10 @@
 			<type>2</type>
 			<location>C:/Users/probook/Desktop/issLab2022/unibolibs</location>
 		</link>
+		<link>
+			<name>.link4</name>
+			<type>2</type>
+			<location>C:/Users/probook/Desktop/ingegneria_sw/issLab2022/unibolibs</location>
+		</link>
 	</linkedResources>
 </projectDescription>
