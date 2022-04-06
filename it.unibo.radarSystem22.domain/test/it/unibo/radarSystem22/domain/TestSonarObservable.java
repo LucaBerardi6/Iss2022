@@ -28,32 +28,8 @@ public class TestSonarObservable {
 	}	
 	
 	
-	
-	
-	/*	sonar.setDistance(DTESTING1);
-		assertTrue(obs1.getDistance()==DTESTING1);
-		assertTrue(obs2.getDistance()==DTESTING1);
-		
-		BasicUtils.delay(1000);
-		
-		sonar.setDistance(DTESTING2);
-		assertTrue(obs1.getDistance()==DTESTING2);
-		assertTrue(obs2.getDistance()==DTESTING2);
-		
-	
-		
-		
-			
-			ISonar sonar = DeviceFactory.createSonar();
-			new SonarConsumerForTesting( sonar, delta ).start();  //consuma
-			sonar.activate();		
-	 		while( sonar.isActive() ) { BasicUtils.delay(1000);} //to avoid premature exit
-	 */
- 	
-	
-	
 	@Test 
-	public void testSonarMock() {
+	public void testSonarMockObservable() {
 		DomainSystemConfig.simulation = true;
 		DomainSystemConfig.testing    = true;
 		DomainSystemConfig.sonarDelay = 1000;	
