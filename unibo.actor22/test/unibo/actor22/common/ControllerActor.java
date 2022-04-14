@@ -11,12 +11,12 @@ import unibo.actor22comm.utils.CommUtils;
  */
 public class ControllerActor extends QakActor22{
 protected int numIter = 1;
-protected IApplMessage getStateRequest ;
+//protected IApplMessage getStateRequest ;  //Eliminato per osservazione Filoni
 protected boolean on = true;
 
 	public ControllerActor(String name  ) {
 		super(name);
-		getStateRequest  = ApplData.buildRequest(name,"ask", ApplData.reqLedState, ApplData.ledName);
+		//getStateRequest  = Qak22Util.buildRequest(name,"ask", ApplData.reqLedState, ApplData.ledName);
  	}
 
 	@Override
@@ -33,6 +33,7 @@ protected boolean on = true;
 		ColorsOut.outappl( getName()  + " | elabCmd=" + msgCmd, ColorsOut.GREEN);
 		switch( msgCmd ) {
 			case ApplData.cmdActivate : {
+				forward(ApplData.activateSonar);
 				doControllerWork();
 	 			break;
 			}
@@ -58,11 +59,14 @@ protected boolean on = true;
 	    if( numIter++ < 5 ) {
 	        if( numIter%2 == 1)  forward( ApplData.turnOnLed ); //accesione
 	        else forward( ApplData.turnOffLed ); //spegnimento
+	        //Messaggio ri creato per osservazione di Filoni
+	        IApplMessage getStateRequest  = Qak22Util.buildRequest(getName(),"ask", ApplData.reqLedState, ApplData.ledName);
 	        request(getStateRequest);
 	      }else {
 	    	  forward( ApplData.turnOffLed );
-			  //ColorsOut.outappl(getName() + " | emit " + ApplData.endWorkEvent, ColorsOut.MAGENTA);
-	    	  //emit( ApplData.endWorkEvent );
+	  		  forward( ApplData.deactivateSonar );
+			  ColorsOut.outappl(getName() + " | emit " + ApplData.endWorkEvent, ColorsOut.MAGENTA);
+	    	  emit( ApplData.endWorkEvent );
 	      }
 		
 	}

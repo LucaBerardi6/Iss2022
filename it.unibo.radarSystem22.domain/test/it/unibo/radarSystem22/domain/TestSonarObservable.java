@@ -39,7 +39,7 @@ public class TestSonarObservable {
 		ISonarObservable sonar = DeviceFactory.createSonarObservable();
 		
 		Observer obs1 = new Observer();
-		sonar.register(obs1);
+		sonar.register(obs1);	
 		
 	
 		new SonarConsumerForTestingObserver( sonar, delta ).start();  //consuma

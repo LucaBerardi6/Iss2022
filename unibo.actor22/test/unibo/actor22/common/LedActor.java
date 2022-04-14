@@ -23,7 +23,7 @@ private ILed led;
 	@Override
 	protected void handleMsg(IApplMessage msg) {
 		CommUtils.aboutThreads(getName()  + " |  Before doJob - ");
-		ColorsOut.out( getName()  + " | doJob " + msg, ColorsOut.RED);
+		ColorsOut.out( getName()  + " | doJob " + msg, ColorsOut.CYAN);
 		if( msg.isRequest() ) elabRequest(msg);
 		else elabCmd(msg);
 	}

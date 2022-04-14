@@ -214,16 +214,31 @@ Si desidera costruire un�applicazione software capace di:
 <center><img src="img/radarDisplay.png" width="10%"></img></center>
 <li>(requisito <b>ledAlarm</b>) accendere un Led se la distanza rilevata dal Sonar 
 � inferiore a un valore limite prefissato denominato <tt>DLIMIT</tt>.
-</li> 
+</li> <br>
+Si desidera realizzare una versione osservabile (SonarObservable) del dispositivo Sonar introdotto in Il Sonar che soddisfi i seguenti requisiti:
+<ul>
+  
+    <li>il SonarObservable deve inviare informazioni a tutti componenti software interessati alla rilevazione dei valori di distanza;
+
+    <li>il SonarObservable deve fornire valori di distanza solo quando questi si modificano in modo significativo;
+
+    <li>i componenti interessati ai valori di distanza prodotti dal SonarObservable sono denominati Observer e pssono risiedere sullo stesso nodo del SonarObservable (cioè sul RaspberryPi) o su un nodo remoto (ad esempio sul PC);
+
+    <li>il funzionamento del SonarObservable deve essere testato in modo automatizzato ponendo un ostacolo a distanza fissa DTESTING1 davanti ad esso, controllando che tutti gli Observers ricevano il valore DTESTING1. Dopo un qualche tempo, si modifica la posizione dell’ostacolo a una nuova distanza DTESTING2 e si controlla che gli tutti gli Observers ricevano il valore DTESTING2.
+</li>
 </div>
 
  
 
 <h2>Requirement analysis</h2>
 <div class="remark">
-    Il SonarObservable deve inviare le informazione, relative alla distanza rilevata dal sonar, a tutti i componenti software interessati, denominati Observer. <br>
-    Gli Observer, che possono risiedere sullo stesso nodo del sonar o su uno remoto, dovranno ricevere tali informazione qualora si presentino differenze significative tra esse.<br>
-    Deve essere realizzato un piano di testing al fine di verificare che gli Observer ricevano correttamente informazioni su un ostacolo posto dapprima a una distanza DTESTING1 e succesivamente a una distanza DTESTING2.<br>
+    <ul>
+        <b>Pattern Observer:</b> <br>
+  
+        <li> Per valori di distanza modificati in modo significativo si intende quei valori che differiscono rispetto al precedente di un delta(scelto pari a 10).
+        <li> La distanza da monitorare confrontandola con il delta scelto, e quindi quella che deve essere inviata agli Oobserver, è quella rilevata dal sonar e non quella precedentemente inviata agli Observer.
+
+        </li>
 
 
 
@@ -236,11 +251,17 @@ Si desidera costruire un�applicazione software capace di:
 <h2>Problem analysis</h2>
  
 <div class="remark">
-  
+    <b>Pattern Observer:</b> <br>
     per la realizzazione del patter observer si possono seguire due modalità:<br>
         1. il SonarObservable è collegato direttamente ai tutti gli Observer interessati che, una volta registrati, riceveranno una notifica qualora le infoazioni siano considerate significative.<br>
         2. il SonarObservable non tiene traccia degli Observer registati, ciò viene fatta da una terza parte, il Broker, che si occuperà anche di notificare le informazioni agli Observer interessati.<br>
-    Il secondo metodo risulta preferibile in quanto permette una separazione e non dipendenza dei 2 componenti.<br>
+   <br>
+   Inizialmente il Sonar è stato il componente reso osservabile che tramite un parte intermedia, il Broker, comunicava con gli Observers. Il Broker stesso notificava agli Observers il cambiamento. <br>
+   In seguito alla discussione in aula ci si è resi conto che non era di interesse osservare il Sonar in quanto dispositivo ma è rilevanete invece osservare la distanza, come entità a se stante.<br>
+   è dunque la distanza misurata a dover essere osservata ed è il Sonar che va a modificare tale distanza. <br>
+   A tal fine sono state realizzate le classi e interfaccie presenti nella sezione "Project" sottostante.
+
+
 
     
 </div> 
@@ -268,9 +289,26 @@ Si desidera costruire un�applicazione software capace di:
         <li>Caricamento del progetto Eclipse RadarSystem22 sul Raspberry Pi, nella cartella <a href="https://github.com/LucaBerardi6/Iss2022/tree/master/Raspberry%20files/firstSprintRadarSystem">firstSprintRadarSystem</a>, e verifica del corretto funzionamento del tutto. 
 
         <li>Verifica del funzionamento di Dispostivi e Controller su RaspberryPi e RadarDisplay su PC.
-
-    
         </li> 
+            <br>
+            <b>Pattern Observer:</b> <br>
+            Realizzazione delle interfaccie:
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/interfaces/IDistanceMeasured.java>IDistanceMeasured</a>
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/interfaces/IObserver.java>IObserver</a>
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/interfaces/ISonarObservable.java>ISonarObservable</a>
+        </li>
+        Realizzazione delle classi:
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/concrete/SonarObservableConcrete.java>SonarObservableConcrete</a>
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/DistanceMeasured.java>DistanceMeasured</a>
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/mock/SonarObservableMock.java>SonarObservableMock</a>
+        </li>
+        Aggiunta alla <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/DeviceFactory.java>DeviceFactory</a>  della funzione createSonarObservable. 
+        <br> Realizzazione delle seguenti classi a fine di testing:
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/concrete/Observer.java>Observer</a>
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/test/it/unibo/radarSystem22/domain/SonarConsumerForTestingObserver.java>SonarConsumerForTestingObserver</a>
+        <li>  <a href=https://github.com/LucaBerardi6/Iss2022/blob/master/it.unibo.radarSystem22.domain/test/it/unibo/radarSystem22/domain/TestSonarObservable.java>TestSonarObservable</a>
+        </li>
+        
 </div>
 
 <h2>Testing</h2> 

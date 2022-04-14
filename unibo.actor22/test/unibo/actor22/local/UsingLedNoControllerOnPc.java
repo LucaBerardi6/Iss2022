@@ -33,28 +33,11 @@ import unibo.actor22comm.utils.CommUtils;
 		DomainSystemConfig.ledGui       = true;			
 		DomainSystemConfig.tracing      = false;			
 		
-		CommSystemConfig.tracing        = true;
+		CommSystemConfig.tracing        = false;
 		
  		led = new LedActor( ApplData.ledName );
- 		//otherLeds();
 		getState = CommUtils.buildRequest("main",  "ask", ApplData.reqLedState, ApplData.ledName); 
    	}
-	
-	
-	
-	protected void otherLeds() {
-		
-		//Creo altri Led per verificare che il numero di thread non aumenta
-	for( int i=1; i<=3; i++) {
-		new LedActor(ApplData.ledName+"_"+i);
-			Qak22Util.sendAMsg(ApplData.turnOnLed, ApplData.ledName+"_"+i  );
-			BasicUtils.delay(500);
-			Qak22Util.sendAMsg(ApplData.turnOffLed, ApplData.ledName+"_"+i  );
-			BasicUtils.delay(500);
-		
-		}
-	}
-	
 	
 	//Accende-spegne il Led due volte
 	protected void execute() {
@@ -63,7 +46,7 @@ import unibo.actor22comm.utils.CommUtils;
 	 	    Qak22Util.sendAMsg( ApplData.turnOnLed  );
 	 	    CommUtils.delay(500);
 // Inviare una request richiede un attore capace di ricevere la reply	 	    
-	 	    Qak22Util.sendAMsg( getState   );
+	 	   // Qak22Util.sendAMsg( getState   );
 	 	    //led.elabMsg(getState);   //Richiesta asincrona. Reply inviata a main
 	 	    CommUtils.delay(500); 	    
 	 	    Qak22Util.sendAMsg( ApplData.turnOffLed  );
