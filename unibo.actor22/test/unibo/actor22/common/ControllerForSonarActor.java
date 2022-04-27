@@ -78,7 +78,6 @@ protected boolean on = true;
     protected void doControllerWork() {
 		CommUtils.aboutThreads(getName()  + " |  Before doControllerWork " + RadarSystemConfig.sonarObservable );
     	if( ! RadarSystemConfig.sonarObservable)  request( ApplData.askDistance );
-    	//perchè sonar non e' observable e quindi non emette eventi
 	}	
 
 }

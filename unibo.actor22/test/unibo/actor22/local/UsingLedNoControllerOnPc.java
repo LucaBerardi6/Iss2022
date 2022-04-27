@@ -46,13 +46,13 @@ import unibo.actor22comm.utils.CommUtils;
 	 	    Qak22Util.sendAMsg( ApplData.turnOnLed  );
 	 	    CommUtils.delay(500);
 // Inviare una request richiede un attore capace di ricevere la reply	 	    
-	 	   // Qak22Util.sendAMsg( getState   );
+	 	    Qak22Util.sendAMsg( getState   );
 	 	    //led.elabMsg(getState);   //Richiesta asincrona. Reply inviata a main
 	 	    CommUtils.delay(500); 	    
 	 	    Qak22Util.sendAMsg( ApplData.turnOffLed  );
 	 	    //led.elabMsg(ApplData.turnOffLed);  //ALTERNATIVA all'uso della utility
 	 	    CommUtils.delay(500);
-	 	    //Qak22Util.sendAMsg( getState   );   //Richiesta asincrona. Reply inviata a main
+	 	    Qak22Util.sendAMsg( getState   );   //Richiesta asincrona. Reply inviata a main
 		}
  	} 
 

@@ -15,7 +15,6 @@ import unibo.actor22.common.RadarSystemConfig;
 @ActorLocal(name =     { ApplData.sonarName, ApplData.controllerName }, 
 			implement = {SonarActor22.class, ControllerForSonarActor.class }
 )
-//non metto il protovol perche' sto lavorando in locale
 public class TestSonarActor22 {
 	
 	public TestSonarActor22() {
@@ -30,14 +29,13 @@ public class TestSonarActor22 {
 		
 		//con false, il ControllerForSonarActor chiede la distanza, 
 		//con true,  il ControllerForSonarActor agisce come observer
-		RadarSystemConfig.sonarObservable 	= true; 
+		RadarSystemConfig.sonarObservable 	= false; 
 		
 		//ALTRO Observer oltr il Controller
- 		new EventObserver(ApplData.observerName);
- 		Qak22Context.registerAsEventObserver(ApplData.observerName, ApplData.evDistance);
+// 		new EventObserver(ApplData.observerName);
+// 		Qak22Context.registerAsEventObserver(ApplData.observerName, ApplData.evDistance);
 		
 		Qak22Context.handleLocalActorDecl(this);
-		//Qak22Context.setActorAsRemote(null, null, null, null);
 		if( RadarSystemConfig.sonarObservable  ) {
  			Qak22Context.registerAsEventObserver(ApplData.controllerName, ApplData.evDistance);
 		}
