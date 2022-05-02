@@ -17,14 +17,17 @@ import java.util.Observable;
 
 public class ClientUsingWs implements IObserver{
  
-	private Interaction2021 conn; 
+	private Interaction2021 conn;
   
 	protected void doBasicMoves() throws Exception {
 		conn = WsConnection.create("localhost:8091" );
 		((WsConnection)conn).addObserver(this);
  
  		//conn.forward( turnLeft( 800  ) );
- 		conn.forward( ApplData.moveForward(1500) );
+ 		conn.forward( ApplData.moveForward(1500) ); 
+ 			//La info di fine mossa viene gestita da update/2
+ 		
+ 		
 //		conn.forward( stop( ) );
 ////    	Thread.sleep( 500 );
 //		conn.forward( turnRight( 400 ) );
@@ -42,7 +45,6 @@ public class ClientUsingWs implements IObserver{
 //			conn.close();
 // 
 	}
-	
 	
 	@Override
 	public void update(Observable source, Object data) {

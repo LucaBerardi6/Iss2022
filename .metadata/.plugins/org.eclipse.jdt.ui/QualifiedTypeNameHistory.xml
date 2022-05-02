@@ -27,4 +27,7 @@
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IDistanceMeasured"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.DistanceMeasured"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonarObservable"/>
+    <fullyQualifiedTypeName name="unibo.wenvUsage22.annot.walker.WsConnWEnvObserver"/>
+    <fullyQualifiedTypeName name="unibo.wenvUsage22.annot.walker.GuardContinueWork"/>
+    <fullyQualifiedTypeName name="unibo.wenvUsage22.annot.walker.GuardEndOfWork"/>
 </qualifiedTypeNameHistroy>
