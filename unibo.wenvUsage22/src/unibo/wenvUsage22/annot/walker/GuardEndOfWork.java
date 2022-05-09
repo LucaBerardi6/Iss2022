@@ -11,7 +11,7 @@ public class GuardEndOfWork {
 	}
 	public static boolean checkValue(   ) {
 		return vn == 4 ;
-	} 
+	}
  	public boolean eval( ) {
  		boolean b = checkValue();
  		ColorsOut.outappl("GuardEndOfWork eval="+b , ColorsOut.CYAN);

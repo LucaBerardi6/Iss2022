@@ -9,7 +9,7 @@ import unibo.actor22comm.ws.WsConnSysObserver;
 import unibo.actor22comm.ws.WsConnection;
 import unibo.wenvUsage22.common.ApplData;
 import unibo.wenvUsage22.common.VRobotMoves;
-
+/*
 public  class MyRobotBoundaryWalkerFsm extends QakActor22Fsm {  
 	private Interaction2021 conn;
 	
@@ -102,3 +102,4 @@ public  class MyRobotBoundaryWalkerFsm extends QakActor22Fsm {
  
 
 }
+*/

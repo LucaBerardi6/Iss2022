@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91f0158b-1904-4949-9b98-5b48c7a0b913" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/Qak22Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/Qak22Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/QakActor22.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/QakActor22.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/QakActor22Fsm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/QakActor22Fsm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/annotations/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22/annotations/Transition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/SystemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/SystemData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/context/EnablerContextForActors.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/context/EnablerContextForActors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/tcp/TcpClientSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/tcp/TcpClientSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/ws/WsConnSysObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.actor22/src/unibo/actor22comm/ws/WsConnSysObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/bin/default/unibo/wenvUsage22/annot/walker/GuardContinueWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/bin/default/unibo/wenvUsage22/annot/walker/GuardContinueWork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/bin/default/unibo/wenvUsage22/annot/walker/MainBoundaryWalkerAnnot.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/bin/default/unibo/wenvUsage22/annot/walker/MainBoundaryWalkerAnnot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/bin/default/unibo/wenvUsage22/common/VRobotMoves.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/bin/default/unibo/wenvUsage22/common/VRobotMoves.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/BoundaryWalkerAnnot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/BoundaryWalkerAnnot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/GuardContinueWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/GuardContinueWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/GuardEndOfWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/GuardEndOfWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/MainBoundaryWalkerAnnot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/annot/walker/MainBoundaryWalkerAnnot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/common/VRobotMoves.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibo.wenvUsage22/src/unibo/wenvUsage22/common/VRobotMoves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibolibs/it.unibo.qakactor-2.7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibolibs/it.unibo.qakactor-2.7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unibolibs/unibo.actor22-1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../unibolibs/unibo.actor22-1.1.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="28eL7UYHEO9e9x6f1VKucszGPfg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../webForActors" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91f0158b-1904-4949-9b98-5b48c7a0b913" name="Changes" comment="" />
+      <created>1651571949404</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651571949404</updated>
+    </task>
+    <servers />
+  </component>
+</project>

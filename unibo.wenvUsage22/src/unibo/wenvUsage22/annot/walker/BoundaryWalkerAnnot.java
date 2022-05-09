@@ -34,9 +34,9 @@ public class BoundaryWalkerAnnot extends QakActor22FsmAnnot  {
 	protected void robotMoving( IApplMessage msg ) {
 		//outInfo(""+msg);	
 		VRobotMoves.step(getName(),conn);
- 	} 
+ 	}
  	
- 	@State( name = "wallDetected" ) 
+ 	@State( name = "wallDetected" )
 	@Transition( state = "robotMoving" , 
 		msgId = SystemData.endMoveOkId,guard=GuardContinueWork.class   )
  	@Transition( state = "endWork" ,     
@@ -48,7 +48,7 @@ public class BoundaryWalkerAnnot extends QakActor22FsmAnnot  {
 		GuardEndOfWork.setValue(ncorner);
 		VRobotMoves.turnLeft(getName(), conn);
  	}
- 
+
  	/*
  	 * Transizioni condizionate (con guardie)
  	 */

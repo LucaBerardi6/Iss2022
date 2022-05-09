@@ -9,7 +9,7 @@ import unibo.actor22comm.utils.CommUtils;
 import unibo.wenvUsage22.common.ApplData;
 
 @Context22(name="ctx",host="localhost", port="8024" )
-@Actor22(name = ApplData.robotName, contextName = "ctx", implement = MyRobotBoundaryWalkerFsm.class)
+@Actor22(name = ApplData.robotName, contextName = "ctx", implement = RobotBoundaryWalkerFsm.class)
 public  class MainRobotMoverFsm  {
    	
 	public MainRobotMoverFsm(   ) {	

@@ -17,7 +17,7 @@ public  class RobotBoundaryWalkerFsm extends QakActor22FsmAnnot {
 		super(name);
  	}
 	
-  	 
+  /*	 
 	@Override
 	protected void declareTheStates( ) {
 		
@@ -86,5 +86,5 @@ public  class RobotBoundaryWalkerFsm extends QakActor22FsmAnnot {
 	}
 
  
-
+*/
 }

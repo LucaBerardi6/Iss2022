@@ -1,22 +1,26 @@
 package unibo.wenvUsage22.actors.robot;
 import org.json.JSONObject;
 import it.unibo.kactor.IApplMessage;
-import unibo.actor22.QakActor22Fsm;
+import unibo.actor22comm.interfaces.IObserver;
 import unibo.actor22comm.interfaces.Interaction2021;
 import unibo.actor22comm.interfaces.StateActionFun;
 import unibo.actor22comm.utils.ColorsOut;
+import unibo.actor22comm.utils.CommUtils;
 import unibo.actor22comm.ws.WsConnSysObserver;
 import unibo.actor22comm.ws.WsConnection;
+import unibo.wenvUsage22.actors.QakActor22Fsm;
 import unibo.wenvUsage22.common.ApplData;
 import unibo.wenvUsage22.common.VRobotMoves;
 
 public  class RobotBoundaryWalkerFsm extends QakActor22Fsm {  
 	private Interaction2021 conn;
+	private boolean endmove = true;
 	
 	public RobotBoundaryWalkerFsm(String name) {
 		super(name);
  	}
 	
+ 
   	 
 	@Override
 	protected void declareTheStates( ) {
@@ -52,6 +56,7 @@ public  class RobotBoundaryWalkerFsm extends QakActor22Fsm {
 				outInfo(""+json);
 				boolean b = false;
 				if( json.has("endmove") )  b = json.getBoolean("endmove");
+				outInfo(""+b); 
 				if(b) {
 					VRobotMoves.step(getName(),conn);
 					addTransition( "checkResult",  "wsEvent" );

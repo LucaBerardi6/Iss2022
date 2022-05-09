@@ -10,10 +10,14 @@ import unibo.actor22comm.utils.CommUtils;
 public class SystemData {
 
 	//Usati da WsConnSysObserver
+	public static final String emptyMoveId   = "emptyMove";
 	public static final String wsEventId     = "wsEvent";
 	public static final String endMoveOkId   = "endMoveOk";
 	public static final String endMoveKoId   = "endMoveKo";
 	
+	public static final IApplMessage emptyMoveCmd(String sender, String receiver)   {
+		return CommUtils.buildDispatch(sender, emptyMoveId, "do", receiver );
+	}
 	public static final IApplMessage endMoveOkEvent(  String move )   {
 		return CommUtils.buildEvent("system", endMoveOkId, move  );
 	}
@@ -24,14 +28,15 @@ public class SystemData {
 		return CommUtils.buildDispatch("system", endMoveOkId, move, receiver );
 	}
 	public static final IApplMessage endMoveKo( String receiver, String move, String dt )   {
-		String result = "{ \"move\":" + move + ", duration:" + dt + "}";
+		String result = "{ \"move\": \"" +  move + "\", \"duration\":" + dt + "}";
 		return CommUtils.buildDispatch("system", endMoveKoId, result, receiver );
 	}
 
 	public static final String startSysCmdId = "activate";
+	public static final String stopSysCmdId  = "stop";
+	public static final String resumeSysCmdId= "resume";
 	public static final String demoSysId     = "demo";
 	public static final String haltSysCmdId  = "halt";
-	public static final String emptyMoveMsg  = "emptyMove";
 	public static final String fireEventId   = "alarmFire";
 	public static final String endAlarmId    = "endAlarm";
 	
@@ -42,9 +47,13 @@ public class SystemData {
 	public static final IApplMessage haltSysCmd(String sender, String receiver)   {
 		return CommUtils.buildDispatch(sender, haltSysCmdId, "do", receiver );
 	}
-	public static final IApplMessage emptyMoveCmd(String sender, String receiver)   {
-		return CommUtils.buildDispatch(sender, emptyMoveMsg, "do", receiver );
+	public static final IApplMessage stopSysCmd(String sender, String receiver)   {
+		return CommUtils.buildDispatch(sender, stopSysCmdId, "do", receiver );
 	}
+	public static final IApplMessage resumeSysCmd(String sender, String receiver)   {
+		return CommUtils.buildDispatch(sender, resumeSysCmdId, "do", receiver );
+	}
+
 	public static final IApplMessage startSysRequest(String sender, String receiver)   {
 		return CommUtils.buildRequest(sender, startSysCmdId, "do", receiver );
 	}
