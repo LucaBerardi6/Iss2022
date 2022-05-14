@@ -30,4 +30,5 @@
     <fullyQualifiedTypeName name="unibo.wenvUsage22.annot.walker.WsConnWEnvObserver"/>
     <fullyQualifiedTypeName name="unibo.wenvUsage22.annot.walker.GuardContinueWork"/>
     <fullyQualifiedTypeName name="unibo.wenvUsage22.annot.walker.GuardEndOfWork"/>
+    <fullyQualifiedTypeName name="unibo.actor22comm.utils.CommUtils"/>
 </qualifiedTypeNameHistroy>

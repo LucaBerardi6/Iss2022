@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\probook\Desktop\issLab2022\unibo.planner22"/>
 			<item value="C:\Users\probook\Desktop\issLab2022\unibo.wenvUsage22"/>
 			<item value="C:\Users\probook\Desktop\issLab2022\unibo.actor22"/>
 			<item value="C:\Users\probook\Desktop\issLab2022\it.unibo.radarSystem22_4"/>
@@ -24,11 +25,14 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\probook\Desktop\issLab2022\unibo.planner22"/>
 			<item value="C:\Users\probook\Desktop\issLab2022\spring\webForActors"/>
 			<item value="C:\Users\probook\Downloads\Tablut2022_Artificial_Inability-main\Tablut2022_Artificial_Inability-main\Tablut"/>
 			<item value="C:\Users\probook\Desktop\ingegneria_sw\issLab2022\unibo.actor22"/>
 			<item value="C:\Users\probook\Desktop\ingegneria_sw\issLab2022\it.unibo.radarSystem22_4"/>
 			<item value="C:\Users\probook\Desktop\issLab2022\it.unibo.radarSystem22_4"/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
